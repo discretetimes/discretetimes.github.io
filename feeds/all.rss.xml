@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>mtfield</title><link href="/" rel="alternate"></link><link href="/feeds/all.rss.xml" rel="self"></link><id>/</id><updated>2018-05-22T19:26:05+08:00</updated><entry><title>happy</title><link href="/happy.html" rel="alternate"></link><published>2018-05-22T19:26:05+08:00</published><updated>2018-05-22T19:26:05+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2018-05-22:/happy.html</id><summary type="html">&lt;p&gt;a&lt;/p&gt;</summary><content type="html">&lt;p&gt;a&lt;/p&gt;</content></entry><entry><title>rain</title><link href="/rain.html" rel="alternate"></link><published>2018-05-03T00:00:00+08:00</published><updated>2018-05-03T00:00:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2018-05-03:/rain.html</id><summary type="html">&lt;p&gt;&lt;img alt="rain" src="https://www.mtyyw.com/wp-content/uploads/2008/08/yutian.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mtfield</title><link href="/" rel="alternate"></link><link href="/feeds/all.rss.xml" rel="self"></link><id>/</id><updated>2018-05-22T19:26:05+08:00</updated><entry><title>happy</title><link href="/happy.html" rel="alternate"></link><published>2018-05-22T19:26:05+08:00</published><updated>2018-05-22T19:26:05+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2018-05-22:/happy.html</id><summary type="html">&lt;p&gt;a&lt;/p&gt;</summary><content type="html">&lt;p&gt;a&lt;/p&gt;</content></entry><entry><title>rain</title><link href="/rain.html" rel="alternate"></link><published>2018-05-03T00:00:00+08:00</published><updated>2018-05-03T00:00:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2018-05-03:/rain.html</id><summary type="html">&lt;!-- category: fun --&gt;
+
+&lt;p&gt;tags: others&lt;/p&gt;
+&lt;p&gt;&lt;img alt="rain" src="https://www.mtyyw.com/wp-content/uploads/2008/08/yutian.jpg"&gt;&lt;/p&gt;
 &lt;iframe src="https://open.spotify.com/embed/track/602QT8hTuTVA4aSQWR13LB" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
 
 &lt;!-- &lt;div&gt;
@@ -14,8 +17,10 @@
 &lt;p&gt;贫穷孤独的少女 象女王一样 住在一把伞中 阳光和雨水只能给你尘土和泥泞    你在伞中 躲开一切   拒绝泪水和回忆 -《雨》&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;从"沾衣欲湿杏花雨， 吹面不寒杨柳风" 到 "雨横风狂三月暮，门掩黄昏，无计留春住。泪眼问花花不语，乱红飞过秋千去"提示着生机勃勃愉快三月已过，有反常的天气艰难四月已过，一场五月初的淅淅沥沥的雨来迎接热烈的夏天。&lt;/p&gt;
-&lt;p&gt;雨气空而迷幻，细嗅，清清爽爽新新，有一点点薄荷的香味，浓的时候，竟发出草和树林之后特有的淡淡土腥气，也许那竟是蚯蚓的蜗牛的腥气吧。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;惊蛰一过 …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="rain" src="https://www.mtyyw.com/wp-content/uploads/2008/08/yutian.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;雨气空而迷幻，细嗅，清清爽爽新新，有一点点薄荷的香味，浓的时候，竟发出草和树林之后特有的淡淡土腥气 …&lt;/p&gt;</summary><content type="html">&lt;!-- category: fun --&gt;
+
+&lt;p&gt;tags: others&lt;/p&gt;
+&lt;p&gt;&lt;img alt="rain" src="https://www.mtyyw.com/wp-content/uploads/2008/08/yutian.jpg"&gt;&lt;/p&gt;
 &lt;iframe src="https://open.spotify.com/embed/track/602QT8hTuTVA4aSQWR13LB" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
 
 &lt;!-- &lt;div&gt;
@@ -38,7 +43,7 @@
 &lt;!-- &lt;iframe src="https://open.spotify.com/embed/track/60Kn73k6aQICtvtNq9fTDT" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt; --&gt;
 
 &lt;p&gt;&lt;img alt="s1" src="images/Fox_remix.png"&gt;
-&lt;!-- &lt;a href='https://weibo.com/ttarticle/p/show?id=2309404228244361595030)'&gt;huar&lt;/a&gt; --&gt;&lt;/p&gt;</content><category term="others"></category></entry><entry><title>关于boot</title><link href="/guan-yu-boot.html" rel="alternate"></link><published>2017-12-10T15:37:36+08:00</published><updated>2017-12-10T15:37:36+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-10:/guan-yu-boot.html</id><summary type="html">&lt;p&gt;选择grub&lt;/p&gt;</summary><content type="html">&lt;p&gt;选择grub&lt;/p&gt;</content><category term="linux"></category></entry><entry><title>about my vim</title><link href="/about-my-vim.html" rel="alternate"></link><published>2017-12-03T15:28:32+08:00</published><updated>2017-12-03T15:28:32+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-03:/about-my-vim.html</id><summary type="html">&lt;hr&gt;
+&lt;!-- &lt;a href='https://weibo.com/ttarticle/p/show?id=2309404228244361595030)'&gt;huar&lt;/a&gt; --&gt;&lt;/p&gt;</content></entry><entry><title>关于boot</title><link href="/guan-yu-boot.html" rel="alternate"></link><published>2017-12-10T15:37:36+08:00</published><updated>2017-12-10T15:37:36+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-10:/guan-yu-boot.html</id><summary type="html">&lt;p&gt;选择grub&lt;/p&gt;</summary><content type="html">&lt;p&gt;选择grub&lt;/p&gt;</content><category term="linux"></category></entry><entry><title>about my vim</title><link href="/about-my-vim.html" rel="alternate"></link><published>2017-12-03T15:28:32+08:00</published><updated>2017-12-03T15:28:32+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-03:/about-my-vim.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;编辑器vim&lt;/p&gt;
 &lt;p&gt;掌握需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
 &lt;p&gt;模式
@@ -471,7 +476,10 @@ let NERDTreeAutoDeleteBuffer=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 让配置变更立即生效
 "autocmd BufWritePost $MYVIMRC source $MYVIMRC
-"""""""""""""""""""""""""""""""""""""""""""""""""""&lt;/p&gt;</content><category term="vim"></category><category term="linux"></category></entry><entry><title>海子</title><link href="/hai-zi.html" rel="alternate"></link><published>2017-11-26T22:10:00+08:00</published><updated>2017-11-26T22:10:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/hai-zi.html</id><summary type="html">&lt;p&gt;春天，十个海子全部复活&lt;/p&gt;
+"""""""""""""""""""""""""""""""""""""""""""""""""""&lt;/p&gt;</content><category term="vim"></category><category term="linux"></category></entry><entry><title>海子</title><link href="/hai-zi.html" rel="alternate"></link><published>2017-11-26T22:10:00+08:00</published><updated>2017-11-26T22:10:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/hai-zi.html</id><summary type="html">&lt;!-- Category: fun --&gt;
+
+&lt;p&gt;Tags: 0
+春天，十个海子全部复活&lt;/p&gt;
 &lt;p&gt;春天，十个海子全部复活
 在光明的景色中
 嘲笑这一野蛮而悲伤的海子
@@ -484,8 +492,10 @@ let NERDTreeAutoDeleteBuffer=1
 就剩这一个，最后一个
 这是黑夜的儿子，沉浸于冬天，倾心死亡
 不能自拔，热爱着空虚而寒冷的乡村&lt;/p&gt;
-&lt;p&gt;那里的谷物高高堆起，遮住了窗子
-它们一半而于一家六口人的嘴，吃和胃 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;春天，十个海子全部复活&lt;/p&gt;
+&lt;p&gt;那里的谷物高高堆起，遮住了窗子 …&lt;/p&gt;</summary><content type="html">&lt;!-- Category: fun --&gt;
+
+&lt;p&gt;Tags: 0
+春天，十个海子全部复活&lt;/p&gt;
 &lt;p&gt;春天，十个海子全部复活
 在光明的景色中
 嘲笑这一野蛮而悲伤的海子
@@ -589,7 +599,7 @@ let NERDTreeAutoDeleteBuffer=1
 &lt;p&gt;这首《面朝大海，春暖花开》，在20多年后依然温暖着无数人的心。当年那些为他的诗歌而痴迷的青年，如今已是双鬓微斑，而他的生命，却永远定格在了25岁。&lt;/p&gt;
 &lt;p&gt;我们纪念海子，就要吸取他有生的精华，那就是诗歌中透露出的纯真和自由。&lt;/p&gt;
 &lt;p&gt;第三那段，还有一篇诗
-南方周末】本文网址：http://www.infzm.com/content/21075&lt;/p&gt;</content><category term="0"></category></entry><entry><title>"about my fedora"</title><link href="/about-my-fedora.html" rel="alternate"></link><published>2017-11-26T18:16:00+08:00</published><updated>2017-11-26T18:16:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/about-my-fedora.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="http://litten.me/assets/blogImg/diary-30.jpg"&gt;&lt;/p&gt;
+南方周末】本文网址：http://www.infzm.com/content/21075&lt;/p&gt;</content></entry><entry><title>"about my fedora"</title><link href="/about-my-fedora.html" rel="alternate"></link><published>2017-11-26T18:16:00+08:00</published><updated>2017-11-26T18:16:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/about-my-fedora.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="http://litten.me/assets/blogImg/diary-30.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Finally,I choose fedora.
 关于vim
 需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
