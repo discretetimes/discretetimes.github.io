@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mtfield - blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2018-05-22T19:26:05+08:00</updated><entry><title>happy</title><link href="/happy.html" rel="alternate"></link><published>2018-05-22T19:26:05+08:00</published><updated>2018-05-22T19:26:05+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2018-05-22:/happy.html</id><summary type="html">&lt;p&gt;a&lt;/p&gt;</summary><content type="html">&lt;p&gt;a&lt;/p&gt;</content></entry><entry><title>关于boot</title><link href="/guan-yu-boot.html" rel="alternate"></link><published>2017-12-10T15:37:36+08:00</published><updated>2017-12-10T15:37:36+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-10:/guan-yu-boot.html</id><summary type="html">&lt;p&gt;选择grub&lt;/p&gt;</summary><content type="html">&lt;p&gt;选择grub&lt;/p&gt;</content><category term="linux"></category></entry><entry><title>about my vim</title><link href="/about-my-vim.html" rel="alternate"></link><published>2017-12-03T15:28:32+08:00</published><updated>2017-12-03T15:28:32+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-12-03:/about-my-vim.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;编辑器vim&lt;/p&gt;
+&lt;p&gt;掌握需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
+&lt;p&gt;模式
+NORMAL ESC&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i → Insert 模式，按 ESC 回到 Normal 模式.
+x → 删当前光标所在的一个字符。
+:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）
+dd …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;编辑器vim&lt;/p&gt;
+&lt;p&gt;掌握需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
+&lt;p&gt;模式
+NORMAL ESC&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i → Insert 模式，按 ESC 回到 Normal 模式.
+x → 删当前光标所在的一个字符。
+:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）
+dd → 删除当前行，并把删除的行存到剪贴板里
+p → 粘贴剪贴板
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;hjkl移动光标
+:help &lt;command&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    0 → 数字零，到行头
+    ^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）
+    $ → 到本行行尾
+    g_ → 到本行最后一个不是blank字符的位置。
+    /pattern → 搜索 pattern 的字符串（陈皓注：如果搜索出多个匹配，可按n键到下一个）
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;p/P--paste
+yy--copy
+&lt;!-- more --&gt;
+u--undo
+&lt;C-r&gt; --redo&lt;/p&gt;
+&lt;p&gt;:e &lt;path/to/file&gt;
+:w--save
+:saveas &lt;path&gt;
+:x ,ZZ,:wq--save&amp;amp;quit
+:q!--quit without save
+:bn :bq --switch to another file&lt;/p&gt;
+&lt;p&gt;INSERT 
+a--光标后插入
+o--新行插入
+O--当前新行插入
+cw--替换光标字符插入&lt;/p&gt;
+&lt;p&gt;. --repeat previous commond
+N&lt;command&gt;--repeat N times&lt;/p&gt;
+&lt;p&gt;N G --to line N
+gg line 
+G last line
+w--Move to start charactor of next word
+e--move to end of next word
+W/E--move to the first/end character??&lt;/p&gt;
+&lt;p&gt;%匹配括号移动
+*/#： 下一个上一个匹配单词&lt;/p&gt;
+&lt;p&gt;&lt;start position&gt;&lt;commond&gt;&lt;eng=d position&gt;
+例如 0y$ 命令意味着：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0 → 先到行头
+y → 从这里开始拷贝
+$ → 拷贝到本行最后一个字符
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;你可可以输入 ye，从当前位置拷贝到本单词的最后一个字符。&lt;/p&gt;
+&lt;p&gt;你也可以输入 y2/foo 来拷贝2个 “foo” 之间的字符串。&lt;/p&gt;
+&lt;p&gt;还有很多时间并不一定你就一定要按y才会拷贝，下面的命令也会被拷贝：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;d (删除 )
+v (可视化的选择)
+gU (变大写)
+gu (变小写)
+等等
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;V mode 先按下v 再移动光标&lt;/p&gt;
+&lt;p&gt;0 → 到行头
+^ → 到本行的第一个非blank字符
+$ → 到行尾
+g_ → 到本行最后一个不是blank字符的位置。
+fa → 到下一个为a的字符处，你也可以fs到下一个为s的字符。
+t, → 到逗号前的第一个字符。逗号可以变成其它字符。
+3fa → 在当前行查找第三个出现的a。
+F 和 T → 和 f 和 t 一样，只不过是相反方向。&lt;/p&gt;
+&lt;p&gt;还有一个很有用的命令是 dt" → 删除所有的内容，直到遇到双引号—— "。
+区域选择 &lt;action&gt;a&lt;object&gt; 或 &lt;action&gt;i&lt;object&gt;&lt;/p&gt;
+&lt;p&gt;在visual 模式下，这些命令很强大，其命令格式为&lt;/p&gt;
+&lt;p&gt;&lt;action&gt;a&lt;object&gt; 和 &lt;action&gt;i&lt;object&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;action可以是任何的命令，如 d (删除), y (拷贝), v (可以视模式选择)。
+object 可能是： w 一个单词， W 一个以空格为分隔的单词， s 一个句字， p 一个段落。也可以是一个特别的字符：&amp;quot;、 &amp;#39;、 )、 }、 ]。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;假设你有一个字符串 (map (+) ("foo")).而光标键在第一个 o 的位置。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    vi&amp;quot; → 会选择 foo.
+    va&amp;quot; → 会选择 &amp;quot;foo&amp;quot;.
+    vi) → 会选择 &amp;quot;foo&amp;quot;.
+    va) → 会选择(&amp;quot;foo&amp;quot;).
+    v2i) → 会选择 map (+) (&amp;quot;foo&amp;quot;)
+    v2a) → 会选择 (map (+) (&amp;quot;foo&amp;quot;))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Text objects selection
+块操作: &lt;C-v&gt;&lt;/p&gt;
+&lt;p&gt;块操作，典型的操作： 0 &lt;C-v&gt; &lt;C-d&gt; I-- [ESC]&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;^ → 到行头
+&amp;lt;C-v&amp;gt; → 开始块操作
+&amp;lt;C-d&amp;gt; → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)
+I-- [ESC] → I是插入，插入“--”，按ESC键来为每一行生效。
+
+自动提示： &amp;lt;C-n&amp;gt; 和 &amp;lt;C-p&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在 Insert 模式下，你可以输入一个词的开头，然后按 &lt;C-p&gt;或是&lt;C-n&gt;，自动补齐功能就出现了……
+宏录制： qa 操作序列 q, @a, @@&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;qa 把你的操作记录在寄存器 a。
+于是 @a 会replay被录制的宏。
+@@ 是一个快捷键用来replay最新录制的宏。
+
+示例
+
+在一个只有一行且这一行只有“1”的文本中，键入如下命令：
+
+    qaYp&amp;lt;C-a&amp;gt;q→
+        qa 开始录制
+        Yp 复制行.
+        &amp;lt;C-a&amp;gt; 增加1.
+        q 停止录制.
+    @a → 在1下面写下 2
+    @@ → 在2 正面写下3
+    现在做 100@@ 会创建新的100行，并把数据增加到 103.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可视化选择： v,V,&lt;C-v&gt;&lt;/p&gt;
+&lt;p&gt;前面，我们看到了 &lt;C-v&gt;的示例 （在Windows下应该是&lt;C-q&gt;），我们可以使用 v 和 V。一但被选好了，你可以做下面的事：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;J → 把所有的行连接起来（变成一行）
+&amp;lt; 或 &amp;gt; → 左右缩进
+= → 自动给缩进 （陈皓注：这个功能相当强大，我太喜欢了）
+
+
+&amp;lt;C-v&amp;gt;
+选中相关的行 (可使用 j 或 &amp;lt;C-d&amp;gt; 或是 /pattern 或是 % 等……)
+$ 到行最后
+A, 输入字符串，按 ESC。
+
+分屏: :split 和 vsplit.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;下面是主要的命令，你可以使用VIM的帮助 :help split. 你可以参考本站以前的一篇文章VIM分屏。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    :split → 创建分屏 (:vsplit创建垂直分屏)
+    &amp;lt;C-w&amp;gt;&amp;lt;dir&amp;gt; : dir就是方向，可以是 hjkl 或是 ←↓↑→ 中的一个，其用来切换分屏。
+    &amp;lt;C-w&amp;gt;_ (或 &amp;lt;C-w&amp;gt;|) : 最大化尺寸 (&amp;lt;C-w&amp;gt;| 垂直分屏)
+    &amp;lt;C-w&amp;gt;+ (或 &amp;lt;C-w&amp;gt;-) : 增加尺寸
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Split
+分屏启动Vim&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;使用大写的O参数来垂直分屏。
+
+vim -On file1 file2 ...
+
+使用小写的o参数来水平分屏。
+
+vim -on file1 file2 ...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注释: n是数字，表示分成几个屏。
+关闭分屏&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;关闭当前窗口。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;n
+    Ctrl+W c&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;关闭当前窗口，如果只剩最后一个了，则退出Vim。
+
+Ctrl+W q
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;分屏&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;上下分割当前打开的文件。
+
+Ctrl+W s
+
+上下分割，并打开一个新的文件。
+
+:sp filename
+
+左右分割当前打开的文件。
+
+Ctrl+W v
+
+左右分割，并打开一个新的文件。
+
+:vsp filename
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;移动光标&lt;/p&gt;
+&lt;p&gt;Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;把光标移到右边的屏。
+
+Ctrl+W l
+
+把光标移到左边的屏中。
+
+Ctrl+W h
+
+把光标移到上边的屏中。
+
+Ctrl+W k
+
+把光标移到下边的屏中。
+
+Ctrl+W j
+
+把光标移到下一个的屏中。.
+
+Ctrl+W w
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;移动分屏&lt;/p&gt;
+&lt;p&gt;这个功能还是使用了Vim的光标键，只不过都是大写。当然了，如果你的分屏很乱很复杂的话，这个功能可能会出现一些非常奇怪的症状。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;向右移动。
+
+Ctrl+W L
+
+向左移动
+
+Ctrl+W H
+
+向上移动
+
+Ctrl+W K
+
+向下移动
+
+Ctrl+W J
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;屏幕尺寸&lt;/p&gt;
+&lt;p&gt;下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用[Ctrl+W &amp;lt;]或是[Ctrl+W &amp;gt;]，但这可能需要最新的版本才支持。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;让所有的屏都有一样的高度。
+
+Ctrl+W =
+
+增加高度。
+
+Ctrl+W +
+
+减少高度。
+
+Ctrl+W -
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;others
+.vimrc
+.vimrc 是控制 vim 行为的配置文件，位于 ~/.vimrc，不论 vim 窗口外观、显示字体，还是操作方式、快捷键、插件属性均可通过编辑该配置文件将 vim 调教成最适合你的编辑器。
+" 定义快捷键的前缀，即&lt;Leader&gt;
+let mapleader=";"&lt;/p&gt;
+&lt;p&gt;.vim/ 目录是存放所有插件的地方。vim 有一套自己的脚本语言 vimscript，通过这种脚本语言可以实现与 vim 交互，达到功能扩展的目的。一组 vimscript 就是一个 vim 插件，vim 的很多功能都由各式插件实现。此外，vim 还支持 perl、python、lua、ruby 等主流脚本语言编写的插件，前提是 vim 源码编译时增加 ---enable-perlinterp、--enable-pythoninterp、--enable-luainterp、--enable-rubyinterp 等选项。vim.org 和 github.com 有丰富的插件资源，任何你想得到的功能，如果 vim 无法直接支持，那一般都有对应的插件为你服务，有需求时可以去逛逛。&lt;/p&gt;
+&lt;p&gt;vim 插件目前分为 &lt;em&gt;.vim 和 &lt;/em&gt;.vba 两类，前者是传统格式的插件，实际上就是一个文本文件，通常 someplugin.vim（插件脚本）与 someplugin.txt（插件帮助文件）并存在一个打包文件中，解包后将 someplugin.vim 拷贝到 ~/.vim/plugin/ 目录，someplugin.txt 拷贝到 ~/.vim/doc/ 目录即可完成安装，重启 vim 后刚安装的插件就已经生效，但帮助文件需执行 :helptags ~/.vim/doc/ 才能生效，可通过 :h someplugin 查看插件帮助信息。传统格式插件需要解包和两次拷贝才能完成安装，相对较繁琐，所以后来又出现了 *.vba 格式插件，安装便捷，只需在 shell 中依次执行如下命令即可：&lt;/p&gt;
+&lt;p&gt;vim someplugin.vba
+:so %
+:q&lt;/p&gt;
+&lt;p&gt;不论是直接拷贝插件到目录，还是通过 *.vba 安装，都不便于插件卸载、升级，后来又出现了管理插件的插件 vundle。&lt;/p&gt;
+&lt;p&gt;后面就正式开始了喽，文中前后内容顺序敏感，请依次查阅。
+install
+fedora 
+中vim安装经常会和vi-mininal冲突故先dnf upgrade vi-minimal 再 dnf install vim&lt;/p&gt;
+&lt;p&gt;插件管理
+https://github.com/junegunn/vim-plug&lt;/p&gt;
+&lt;p&gt;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+or add this in your .vimrc before plug#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif&lt;/p&gt;
+&lt;p&gt;finally :PlugInstall&lt;/p&gt;
+&lt;p&gt;其余部分参看.vimrc&lt;/p&gt;
+&lt;p&gt;""""""""""""""""""""""""""""""""""""""""""""""""""""
+"basic&lt;/p&gt;
+&lt;p&gt;set wildmenu
+filetype on
+syntax enable
+syntax on
+set laststatus=2
+set fileformats=unix,dos
+set nowrap
+set nobackup
+set nu
+set ts=4
+set sw=4
+set expandtab
+set autoindent
+" 自适应不同语言的智能缩进
+filetype indent on
+" 搜索时大小写不敏感
+set ignorecase
+" 关闭兼容模式
+set nocompatible
+" 显示光标当前位置
+set ruler
+" 开启行号显示
+set number
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"PlugInstall&lt;/p&gt;
+&lt;p&gt;if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')&lt;/p&gt;
+&lt;p&gt;Plug 'bling/vim-airline'
+Plug 'godlygeek/tabular'
+Plug 'luochen1990/rainbow'
+Plug 'plasticboy/vim-markdown'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tomasr/molokai'
+"This plug-in provides automatic closing of quotes, parenthesis, brackets, etc.,
+"Plug 'Valloric/YouCompleteMe'
+call plug#end()&lt;/p&gt;
+&lt;p&gt;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"molokai https://github.com/tomasr/molokai 
+"Molokai is a Vim port of the monokai theme for TextMate originally created by Wimer Hazenberg.
+let g:molokai_original = 1
+"let g:rehash256 = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"airline https://github.com/vim-airline/vim-airline
+"Lean &amp;amp; mean status/tabline for vim that's light as air.When the plugin is correctly loaded, Vim will draw a nice statusline at the bottom of each window.
+let g:airline#extensions#tabline#enabled = 1&lt;/p&gt;
+&lt;p&gt;""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nerd commenter https://github.com/scrooloose/nerdcommenter
+" Add spaces after comment delimiters by default
+" 用:help nerdcommenter可以查看手册的吧？
+"\cy:注释前复制。即注释以后用p可以贴出原先内容。
+"\c$:从当前字符注释到行尾。
+""\cA:在行尾添加注释，我重新map到\cl
+""\cl \cb:左对齐注释，两端对齐的注释。
+"\cu:反注释
+"&lt;leader&gt;m，&lt;leader&gt;默认是\，也就是说按\cc cu就会将当前行注释。选中几行代码再按\c&lt;space&gt;就会注释你选中的那几行
+"\c&lt;space&gt;注释反注释
+filetype plugin on
+let g:NERDSpaceDelims = 1&lt;/p&gt;
+&lt;p&gt;" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1&lt;/p&gt;
+&lt;p&gt;" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'&lt;/p&gt;
+&lt;p&gt;" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1&lt;/p&gt;
+&lt;p&gt;" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/*&lt;em&gt;','right': '&lt;/em&gt;/' } }&lt;/p&gt;
+&lt;p&gt;" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1&lt;/p&gt;
+&lt;p&gt;" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"rainbow https://github.com/luochen1990/rainbow/blob/master/README_zh.md
+"众所周知，最复杂的代码都是由一堆乱七八糟的括号组成。这款插件通过以不同的颜色展示不同层次的括号，致力于帮助你阅读这样的复杂代码。
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+    let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '&lt;em&gt;,&lt;/em&gt;',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/[/ end=/]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '&lt;em&gt;': {},
+    \       'tex': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/[/ end=/]/'],
+    \       },
+    \       'lisp': {
+    \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+    \       },
+    \       'vim': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/[/ end=/]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/[/ end=/]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+    \       },
+    \       'html': {
+    \           'parentheses': ['start=/\v\&amp;lt;((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ &amp;gt;])@!\z([-&lt;em&gt;:a-zA-Z0-9]+)(\s+[-&lt;/em&gt;:a-zA-Z0-9]+(\=("[^"]&lt;/em&gt;"|'."'".'[^'."'".']&lt;em&gt;'."'".'|[^ '."'".'"&amp;gt;&amp;lt;=`]&lt;/em&gt;))?)*&gt;/ end=#&lt;/\z1&gt;# fold'],
+    \       },
+    \       'css': 0,
+    \   }
+    }
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim-markdown https://github.com/plasticboy/vim-markdown#installation
+"Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+"????
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_level = 6
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nerdtree https://github.com/scrooloose/nerdtree
+"The NERDTree is a file system explorer for the Vim editor. Using this plugin, users can visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations.
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 &amp;amp;&amp;amp; !exists("s:std_in") | NERDTree | endif
+"C-n open nerdtree
+map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+"let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 让配置变更立即生效
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"""""""""""""""""""""""""""""""""""""""""""""""""""&lt;/p&gt;</content><category term="vim"></category><category term="linux"></category></entry><entry><title>"about my fedora"</title><link href="/about-my-fedora.html" rel="alternate"></link><published>2017-11-26T18:16:00+08:00</published><updated>2017-11-26T18:16:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/about-my-fedora.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="http://litten.me/assets/blogImg/diary-30.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Finally,I choose fedora.
+关于vim
+需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
+&lt;p&gt;模式
+NORMAL ESC&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i → Insert 模式，按 ESC 回到 Normal 模式.
+x → 删当前光标所在的一个字符。
+:wq → 存盘 + 退出 (:w 存盘, :q 退出 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="http://litten.me/assets/blogImg/diary-30.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Finally,I choose fedora.
+关于vim
+需要时间，需要练习，像要学习乐器一样，&lt;/p&gt;
+&lt;p&gt;模式
+NORMAL ESC&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i → Insert 模式，按 ESC 回到 Normal 模式.
+x → 删当前光标所在的一个字符。
+:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）
+dd → 删除当前行，并把删除的行存到剪贴板里
+p → 粘贴剪贴板
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;hjkl移动光标
+:help &lt;command&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    0 → 数字零，到行头
+    ^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）
+    $ → 到本行行尾
+    g_ → 到本行最后一个不是blank字符的位置。
+    /pattern → 搜索 pattern 的字符串（陈皓注：如果搜索出多个匹配，可按n键到下一个）
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;!-- more --&gt;
+p/P--paste
+yy--copy&lt;/p&gt;
+&lt;p&gt;u--undo
+&lt;C-r&gt; --redo&lt;/p&gt;
+&lt;p&gt;:e &lt;path/to/file&gt;
+:w--save
+:saveas &lt;path&gt;
+:x ,ZZ,:wq--save&amp;amp;quit
+:q!--quit without save
+:bn :bq --switch to another file&lt;/p&gt;
+&lt;p&gt;INSERT 
+a--光标后插入
+o--新行插入
+O--当前新行插入
+cw--替换光标字符插入&lt;/p&gt;
+&lt;p&gt;. --repeat previous commond
+N&lt;command&gt;--repeat N times&lt;/p&gt;
+&lt;p&gt;N G --to line N
+gg line 
+G last line
+w--Move to start charactor of next word
+e--move to end of next word
+W/E--move to the first/end character??&lt;/p&gt;
+&lt;p&gt;%匹配括号移动
+*/#： 下一个上一个匹配单词&lt;/p&gt;
+&lt;p&gt;&lt;start position&gt;&lt;commond&gt;&lt;eng=d position&gt;
+例如 0y$ 命令意味着：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0 → 先到行头
+y → 从这里开始拷贝
+$ → 拷贝到本行最后一个字符
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;你可可以输入 ye，从当前位置拷贝到本单词的最后一个字符。&lt;/p&gt;
+&lt;p&gt;你也可以输入 y2/foo 来拷贝2个 “foo” 之间的字符串。&lt;/p&gt;
+&lt;p&gt;还有很多时间并不一定你就一定要按y才会拷贝，下面的命令也会被拷贝：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;d (删除 )
+v (可视化的选择)
+gU (变大写)
+gu (变小写)
+等等
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;V mode 先按下v 再移动光标&lt;/p&gt;
+&lt;p&gt;0 → 到行头
+^ → 到本行的第一个非blank字符
+$ → 到行尾
+g_ → 到本行最后一个不是blank字符的位置。
+fa → 到下一个为a的字符处，你也可以fs到下一个为s的字符。
+t, → 到逗号前的第一个字符。逗号可以变成其它字符。
+3fa → 在当前行查找第三个出现的a。
+F 和 T → 和 f 和 t 一样，只不过是相反方向。&lt;/p&gt;
+&lt;p&gt;还有一个很有用的命令是 dt" → 删除所有的内容，直到遇到双引号—— "。
+区域选择 &lt;action&gt;a&lt;object&gt; 或 &lt;action&gt;i&lt;object&gt;&lt;/p&gt;
+&lt;p&gt;在visual 模式下，这些命令很强大，其命令格式为&lt;/p&gt;
+&lt;p&gt;&lt;action&gt;a&lt;object&gt; 和 &lt;action&gt;i&lt;object&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;action可以是任何的命令，如 d (删除), y (拷贝), v (可以视模式选择)。
+object 可能是： w 一个单词， W 一个以空格为分隔的单词， s 一个句字， p 一个段落。也可以是一个特别的字符：&amp;quot;、 &amp;#39;、 )、 }、 ]。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;假设你有一个字符串 (map (+) ("foo")).而光标键在第一个 o 的位置。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    vi&amp;quot; → 会选择 foo.
+    va&amp;quot; → 会选择 &amp;quot;foo&amp;quot;.
+    vi) → 会选择 &amp;quot;foo&amp;quot;.
+    va) → 会选择(&amp;quot;foo&amp;quot;).
+    v2i) → 会选择 map (+) (&amp;quot;foo&amp;quot;)
+    v2a) → 会选择 (map (+) (&amp;quot;foo&amp;quot;))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Text objects selection
+块操作: &lt;C-v&gt;&lt;/p&gt;
+&lt;p&gt;块操作，典型的操作： 0 &lt;C-v&gt; &lt;C-d&gt; I-- [ESC]&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;^ → 到行头
+&amp;lt;C-v&amp;gt; → 开始块操作
+&amp;lt;C-d&amp;gt; → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)
+I-- [ESC] → I是插入，插入“--”，按ESC键来为每一行生效。
+
+自动提示： &amp;lt;C-n&amp;gt; 和 &amp;lt;C-p&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在 Insert 模式下，你可以输入一个词的开头，然后按 &lt;C-p&gt;或是&lt;C-n&gt;，自动补齐功能就出现了……
+宏录制： qa 操作序列 q, @a, @@&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;qa 把你的操作记录在寄存器 a。
+于是 @a 会replay被录制的宏。
+@@ 是一个快捷键用来replay最新录制的宏。
+
+示例
+
+在一个只有一行且这一行只有“1”的文本中，键入如下命令：
+
+    qaYp&amp;lt;C-a&amp;gt;q→
+        qa 开始录制
+        Yp 复制行.
+        &amp;lt;C-a&amp;gt; 增加1.
+        q 停止录制.
+    @a → 在1下面写下 2
+    @@ → 在2 正面写下3
+    现在做 100@@ 会创建新的100行，并把数据增加到 103.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可视化选择： v,V,&lt;C-v&gt;&lt;/p&gt;
+&lt;p&gt;前面，我们看到了 &lt;C-v&gt;的示例 （在Windows下应该是&lt;C-q&gt;），我们可以使用 v 和 V。一但被选好了，你可以做下面的事：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;J → 把所有的行连接起来（变成一行）
+&amp;lt; 或 &amp;gt; → 左右缩进
+= → 自动给缩进 （陈皓注：这个功能相当强大，我太喜欢了）
+
+
+&amp;lt;C-v&amp;gt;
+选中相关的行 (可使用 j 或 &amp;lt;C-d&amp;gt; 或是 /pattern 或是 % 等……)
+$ 到行最后
+A, 输入字符串，按 ESC。
+
+分屏: :split 和 vsplit.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;下面是主要的命令，你可以使用VIM的帮助 :help split. 你可以参考本站以前的一篇文章VIM分屏。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    :split → 创建分屏 (:vsplit创建垂直分屏)
+    &amp;lt;C-w&amp;gt;&amp;lt;dir&amp;gt; : dir就是方向，可以是 hjkl 或是 ←↓↑→ 中的一个，其用来切换分屏。
+    &amp;lt;C-w&amp;gt;_ (或 &amp;lt;C-w&amp;gt;|) : 最大化尺寸 (&amp;lt;C-w&amp;gt;| 垂直分屏)
+    &amp;lt;C-w&amp;gt;+ (或 &amp;lt;C-w&amp;gt;-) : 增加尺寸
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Split
+分屏启动Vim&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;使用大写的O参数来垂直分屏。
+
+vim -On file1 file2 ...
+
+使用小写的o参数来水平分屏。
+
+vim -on file1 file2 ...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注释: n是数字，表示分成几个屏。
+关闭分屏&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;关闭当前窗口。
+
+Ctrl+W c
+
+关闭当前窗口，如果只剩最后一个了，则退出Vim。
+
+Ctrl+W q
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;分屏&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;上下分割当前打开的文件。
+
+Ctrl+W s
+
+上下分割，并打开一个新的文件。
+
+:sp filename
+
+左右分割当前打开的文件。
+
+Ctrl+W v
+
+左右分割，并打开一个新的文件。
+
+:vsp filename
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;移动光标&lt;/p&gt;
+&lt;p&gt;Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;把光标移到右边的屏。
+
+Ctrl+W l
+
+把光标移到左边的屏中。
+
+Ctrl+W h
+
+把光标移到上边的屏中。
+
+Ctrl+W k
+
+把光标移到下边的屏中。
+
+Ctrl+W j
+
+把光标移到下一个的屏中。.
+
+Ctrl+W w
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;移动分屏&lt;/p&gt;
+&lt;p&gt;这个功能还是使用了Vim的光标键，只不过都是大写。当然了，如果你的分屏很乱很复杂的话，这个功能可能会出现一些非常奇怪的症状。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;向右移动。
+
+Ctrl+W L
+
+向左移动
+
+Ctrl+W H
+
+向上移动
+
+Ctrl+W K
+
+向下移动
+
+Ctrl+W J
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;屏幕尺寸&lt;/p&gt;
+&lt;p&gt;下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用[Ctrl+W &amp;lt;]或是[Ctrl+W &amp;gt;]，但这可能需要最新的版本才支持。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;让所有的屏都有一样的高度。
+
+Ctrl+W =
+
+增加高度。
+
+Ctrl+W +
+
+减少高度。
+
+Ctrl+W -
+&lt;/pre&gt;&lt;/div&gt;</content><category term="linux"></category></entry><entry><title>photoshop基础</title><link href="/photoshopji-chu.html" rel="alternate"></link><published>2017-11-26T17:39:51+08:00</published><updated>2017-11-26T17:39:51+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/photoshopji-chu.html</id><summary type="html">&lt;p&gt;Photoshop能干什么&lt;/p&gt;
+&lt;p&gt;只要您能想得到，您便可以使用 Photoshop 这一全球最佳的图像和设计应用程序将您想象中的内容制作出来。创建和增强照片、插图和 3D 图稿。设计网站和移动应用程序。编辑视频，模拟真实生活画作等等。这里有让您的想法变成真所需的一切。
+ &lt;em&gt;官网宣传&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;日常生活中我们会看到恶搞图，精美照片，还有精致细腻的海报，震惊感慨之余你也许也会有自主操刀之意，奈何Photoshop门槛过高而只得临渊羡鱼。决定心来学习PS，三分钟热度后丢弃一旁，教程没少下，囤积一大堆资料结果不知如何下手，又或是使用PhotoShop多年，仍是用Photoshop来修改图片大小。下面将抛开繁杂的教程，从思路着手，逐步学习Photoshop …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Photoshop能干什么&lt;/p&gt;
+&lt;p&gt;只要您能想得到，您便可以使用 Photoshop 这一全球最佳的图像和设计应用程序将您想象中的内容制作出来。创建和增强照片、插图和 3D 图稿。设计网站和移动应用程序。编辑视频，模拟真实生活画作等等。这里有让您的想法变成真所需的一切。
+ &lt;em&gt;官网宣传&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;日常生活中我们会看到恶搞图，精美照片，还有精致细腻的海报，震惊感慨之余你也许也会有自主操刀之意，奈何Photoshop门槛过高而只得临渊羡鱼。决定心来学习PS，三分钟热度后丢弃一旁，教程没少下，囤积一大堆资料结果不知如何下手，又或是使用PhotoShop多年，仍是用Photoshop来修改图片大小。下面将抛开繁杂的教程，从思路着手，逐步学习Photoshop
+&lt;em&gt;实际情况&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;[栗子]http://www.adobe.com/cn/products/photoshop.html?promoid=PC1PQQ5T&amp;amp;mv=other#hero-featured-video
+&lt;!-- more --&gt;&lt;/p&gt;</content><category term="learn"></category></entry><entry><title>test</title><link href="/test.html" rel="alternate"></link><published>2017-11-26T17:15:21+08:00</published><updated>2017-11-26T17:15:21+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-26:/test.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;layout: post
+title: "江南见闻"
+date: 2017-05-22 10:36
+comments: true
+tags: 
+    - 旧事&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-23.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;h3&gt;扬起帆&lt;/h3&gt;
+&lt;p&gt;这个4月真的特别丧…
+开心的事情屈指可数，貌似也只有朴树的新专辑了。&lt;/p&gt;
+&lt;p&gt;病后状态一直不好，工作时脑后阴风习习
+bug，变成了巨大的飞蛾，每每衔着灵魂四方飘游。
+周四晚，无耻地逃了一个会议
+下班，拖着疲惫的身体，径直就飞往了杭州。&lt;/p&gt;
+&lt;p&gt;都这么累了，问自己为什么又在路上了呢 …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;layout: post
+title: "江南见闻"
+date: 2017-05-22 10:36
+comments: true
+tags: 
+    - 旧事&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-23.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;h3&gt;扬起帆&lt;/h3&gt;
+&lt;p&gt;这个4月真的特别丧…
+开心的事情屈指可数，貌似也只有朴树的新专辑了。&lt;/p&gt;
+&lt;p&gt;病后状态一直不好，工作时脑后阴风习习
+bug，变成了巨大的飞蛾，每每衔着灵魂四方飘游。
+周四晚，无耻地逃了一个会议
+下班，拖着疲惫的身体，径直就飞往了杭州。&lt;/p&gt;
+&lt;p&gt;都这么累了，问自己为什么又在路上了呢？
+可能只是我觉得，旅行的时候不用去想以前和以后。
+但旅行那么短，而生活那么长
+那就更应该不停的出发吧？即使只是一场短暂的幻觉。&lt;/p&gt;
+&lt;p&gt;我这么想着的时候，这场幻觉正变得越来越真实。
+凌晨让头脑额外清醒，飞机下出现了新城
+灯火穿透了夜色与云层，越来越浓，背后的飞蛾被引诱扑了下去——
+烟消云散。&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;《空帆船》在耳边唱起：
+“那狂风 那不知吉凶 的我的前程
+我还是要扬起帆
+当我听到 风从我耳旁呼啸着掠过
+那一刻我的心狂喜着猛烈地跳动…”&lt;/p&gt;
+&lt;p&gt;心猛烈地跳动，因为逃避可耻但很有用。&lt;/p&gt;
+&lt;h3&gt;白兔先生与百间楼&lt;/h3&gt;
+&lt;p&gt;一早坐动车去湖州，再转大巴
+10点左右，我就踏在南浔古旧的石板路上了。
+人好少，甚至连售票处都没有人
+想着自己也不认识路，就跟着一只小狗走。
+反正爱丽丝也是跟着白兔先生走，才掉进了洞里开启了冒险…
+没毛病，要啥GPS？&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-24.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;小狗领着我，南浔的景致慢慢突显出来
+河埠沉静，燕子高歌，一圈一圈地在楼间徘徊
+我就往燕子多的地方走，所谓“王谢堂前燕”，那里总会有人烟
+然而迷了路，停下来，一个洗衣服的大叔告诉我，这是百间楼啊！
+惊喜这就是我一开始想找的地方。&lt;/p&gt;
+&lt;p&gt;就在附近客栈卸下背包，要了一间临河而居的房
+也不管下雨了，这就往前行去。
+其实江南水乡，乌镇和周庄我小时候都去过
+可惜印象不好，到现在脑中只记得沈万三和猪蹄了…
+百间楼这一带，才真真切切的是我想象中的水乡呀！&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-25.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;当你看到人们在河边洗衣，棒子捶打衣服激起了涟漪
+看到他们沏了一壶茶，给小孩讲水鬼河童的鬼怪故事
+看到小狗跳进河里游往对岸，冲着笼中的八哥汪汪叫
+老人手持蒲扇，把狗赶开，担心别把自家八哥教坏了…
+你才明白这条江河，顺着千年的血脉，流进了他们的灵魂里。&lt;/p&gt;
+&lt;h3&gt;雨中餐&lt;/h3&gt;
+&lt;p&gt;中午雨大，临河就餐
+专门要了不明就里的两味菜：丁莲芳千张包子、绣花锦。&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-26.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;这包子伴汤伴葱呈上来，初看十分清淡，咬上一口，浓郁至极
+才明白鲜味，好像熟睡在那豆皮裹成的被窝里。
+猪肉、干贝、虾仁，哥仨在锅里葛优躺了2小时
+待你掀开，三位死宅梦中惊醒，排排坐立了起来…
+可以说是好吃得非常有层次了。&lt;/p&gt;
+&lt;p&gt;绣花锦这名字额外华丽，点菜时专门不去问，想自己猜猜。
+因为广式茶点那种稀里花哨的称呼，对我迷之吸引
+以前在茶餐厅，点过一个“金钱粥”，端上来是“香蕉片伴白粥”
+更悲催的是，我同伴点的“裸体粥”，端上来就是童叟无欺的“白粥”…
+你说气不气人？
+起个变量名都不遵循基本法？&lt;/p&gt;
+&lt;p&gt;绣花锦端了上来，一碟白灼青菜。
+也就家常菜模样，看着并未觉得有什么特别
+举筷夹起，才发现有些许不同，就是有一种清香，入口像是白菜，但更加软糯。
+后来才知道，这种菜只长在南浔方圆十里，十里外菜就变种，有形而无香。
+这么一想，这味菜就不一样了
+好像一个思乡恋家，不想远嫁的闺中小姐。&lt;/p&gt;
+&lt;h3&gt;江南好&lt;/h3&gt;
+&lt;p&gt;中午一觉睡到三点，然后到南边转悠，大多是保存完好的古代大宅。
+刘氏梯号在中式风火墙后面，藏匿一座欧式建筑的结构着实有意思
+仿佛又燃起了我对古建、以及Minecraft的热情…
+想象远在台湾，写《穿墙透壁》的李乾朗教授一定也会如视珍宝吧。&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-27.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;而印象最深的是“求恕里”。这个名字是有多好？
+藏书的主人，到底发生了什么事情，才把求以宽恕，冠之以楼名？
+简介里说，只是主人一生淡泊名利，不求仕进。
+但总觉得不会这么简单，因为在这片土地
+细窄的甬道回响着多少故事，江南的烟雨又隐藏了多少秘密？
+恐怕再也没有人能说清。&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/blogImg/diary-28.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;但秘密最好的结局，就是永远成为秘密
+而时间能解决的问题，就都不是问题。
+谁的心中没有结？谁的记忆里，又全是欢乐时光呢？
+想到这些，觉得于我而言，同样是一种安慰和警醒吧。&lt;/p&gt;
+&lt;p&gt;又顿时觉得很轻松。
+好似中午那觉还没睡醒，活在梦中。
+江南好啊，风景旧曾谙。
+喝酒去！&lt;/p&gt;
+&lt;p&gt;—— Litten 5.22&lt;/p&gt;</content><category term="pelican"></category></entry><entry><title>Hello World</title><link href="/hello-world.html" rel="alternate"></link><published>2017-11-20T18:00:00+08:00</published><updated>2017-11-20T18:00:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2017-11-20:/hello-world.html</id><summary type="html">&lt;p&gt;&lt;img src="/assets/blogimg/a/cheese5.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to &lt;a href="https://hexo.io/"&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href="https://hexo.io/docs/"&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/assets/blogimg/a/cheese5.jpg" width="500"&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to &lt;a href="https://hexo.io/"&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href="https://hexo.io/docs/"&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href="https://hexo.io/docs/troubleshooting.html"&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href="https://github.com/hexojs/hexo/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Quick Start&lt;/h2&gt;
+&lt;h3&gt;Create a new post&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ hexo new &lt;span class="s2"&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/writing.html"&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Run server&lt;/h3&gt;
+&lt;!-- more --&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ hexo server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/server.html"&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Generate static files&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ hexo generate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/generating.html"&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Deploy to remote sites&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ hexo deploy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/deployment.html"&gt;Deployment&lt;/a&gt;&lt;/p&gt;</content><category term="hexo"></category></entry><entry><title>about me</title><link href="/me.html" rel="alternate"></link><published>2015-12-03T10:20:00+08:00</published><updated>2010-12-05T19:30:00+08:00</updated><author><name>weizenbier</name></author><id>tag:None,2015-12-03:/me.html</id><summary type="html">&lt;p&gt;Short version for index and feeds&lt;/p&gt;</summary><content type="html"></content><category term="me"></category></entry></feed>

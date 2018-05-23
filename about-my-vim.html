@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+        <body background="images/Fox_remix.png">
+<head>
+        <meta charset="utf-8" />
+        <title>about my vim</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mtfield Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">mtfield </a></h1>
+                <!-- <img src="images/bat.png" class="body"/> -->
+                <nav><ul>
+ 
+                    <li class="active"><a href="/category/blog.html">blog</a></li>
+                    <li><a href="/category/fun.html">fun</a></li>
+                </ul>
+<form id="search" action"#" onsubmit="javascript:window.open('https://duckduckgo.com/?q='+document.getElementById('keywords').value+'+site:');">
+                        <input id="keywords" type="text" />
+                    </form>
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/about-my-vim.html" rel="bookmark"
+           title="Permalink to about my vim">about my vim</a></h1>
+      
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <span>Sun 03 December 2017</span>
+<span>| tags: <a href="/tag/vim.html">vim</a><a href="/tag/linux.html">linux</a></span>
+</footer><!-- /.post-info -->      <hr>
+<p>编辑器vim</p>
+<p>掌握需要时间，需要练习，像要学习乐器一样，</p>
+<p>模式
+NORMAL ESC</p>
+<div class="highlight"><pre><span></span>i → Insert 模式，按 ESC 回到 Normal 模式.
+x → 删当前光标所在的一个字符。
+:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）
+dd → 删除当前行，并把删除的行存到剪贴板里
+p → 粘贴剪贴板
+</pre></div>
+
+
+<p>hjkl移动光标
+:help <command></p>
+<div class="highlight"><pre><span></span>    0 → 数字零，到行头
+    ^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）
+    $ → 到本行行尾
+    g_ → 到本行最后一个不是blank字符的位置。
+    /pattern → 搜索 pattern 的字符串（陈皓注：如果搜索出多个匹配，可按n键到下一个）
+</pre></div>
+
+
+<p>p/P--paste
+yy--copy
+<!-- more -->
+u--undo
+<C-r> --redo</p>
+<p>:e <path/to/file>
+:w--save
+:saveas <path>
+:x ,ZZ,:wq--save&amp;quit
+:q!--quit without save
+:bn :bq --switch to another file</p>
+<p>INSERT 
+a--光标后插入
+o--新行插入
+O--当前新行插入
+cw--替换光标字符插入</p>
+<p>. --repeat previous commond
+N<command>--repeat N times</p>
+<p>N G --to line N
+gg line 
+G last line
+w--Move to start charactor of next word
+e--move to end of next word
+W/E--move to the first/end character??</p>
+<p>%匹配括号移动
+*/#： 下一个上一个匹配单词</p>
+<p><start position><commond><eng=d position>
+例如 0y$ 命令意味着：</p>
+<div class="highlight"><pre><span></span>0 → 先到行头
+y → 从这里开始拷贝
+$ → 拷贝到本行最后一个字符
+</pre></div>
+
+
+<p>你可可以输入 ye，从当前位置拷贝到本单词的最后一个字符。</p>
+<p>你也可以输入 y2/foo 来拷贝2个 “foo” 之间的字符串。</p>
+<p>还有很多时间并不一定你就一定要按y才会拷贝，下面的命令也会被拷贝：</p>
+<div class="highlight"><pre><span></span>d (删除 )
+v (可视化的选择)
+gU (变大写)
+gu (变小写)
+等等
+</pre></div>
+
+
+<p>V mode 先按下v 再移动光标</p>
+<p>0 → 到行头
+^ → 到本行的第一个非blank字符
+$ → 到行尾
+g_ → 到本行最后一个不是blank字符的位置。
+fa → 到下一个为a的字符处，你也可以fs到下一个为s的字符。
+t, → 到逗号前的第一个字符。逗号可以变成其它字符。
+3fa → 在当前行查找第三个出现的a。
+F 和 T → 和 f 和 t 一样，只不过是相反方向。</p>
+<p>还有一个很有用的命令是 dt" → 删除所有的内容，直到遇到双引号—— "。
+区域选择 <action>a<object> 或 <action>i<object></p>
+<p>在visual 模式下，这些命令很强大，其命令格式为</p>
+<p><action>a<object> 和 <action>i<object></p>
+<div class="highlight"><pre><span></span>action可以是任何的命令，如 d (删除), y (拷贝), v (可以视模式选择)。
+object 可能是： w 一个单词， W 一个以空格为分隔的单词， s 一个句字， p 一个段落。也可以是一个特别的字符：&quot;、 &#39;、 )、 }、 ]。
+</pre></div>
+
+
+<p>假设你有一个字符串 (map (+) ("foo")).而光标键在第一个 o 的位置。</p>
+<div class="highlight"><pre><span></span>    vi&quot; → 会选择 foo.
+    va&quot; → 会选择 &quot;foo&quot;.
+    vi) → 会选择 &quot;foo&quot;.
+    va) → 会选择(&quot;foo&quot;).
+    v2i) → 会选择 map (+) (&quot;foo&quot;)
+    v2a) → 会选择 (map (+) (&quot;foo&quot;))
+</pre></div>
+
+
+<p>Text objects selection
+块操作: <C-v></p>
+<p>块操作，典型的操作： 0 <C-v> <C-d> I-- [ESC]</p>
+<div class="highlight"><pre><span></span>^ → 到行头
+&lt;C-v&gt; → 开始块操作
+&lt;C-d&gt; → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)
+I-- [ESC] → I是插入，插入“--”，按ESC键来为每一行生效。
+
+自动提示： &lt;C-n&gt; 和 &lt;C-p&gt;
+</pre></div>
+
+
+<p>在 Insert 模式下，你可以输入一个词的开头，然后按 <C-p>或是<C-n>，自动补齐功能就出现了……
+宏录制： qa 操作序列 q, @a, @@</p>
+<div class="highlight"><pre><span></span>qa 把你的操作记录在寄存器 a。
+于是 @a 会replay被录制的宏。
+@@ 是一个快捷键用来replay最新录制的宏。
+
+示例
+
+在一个只有一行且这一行只有“1”的文本中，键入如下命令：
+
+    qaYp&lt;C-a&gt;q→
+        qa 开始录制
+        Yp 复制行.
+        &lt;C-a&gt; 增加1.
+        q 停止录制.
+    @a → 在1下面写下 2
+    @@ → 在2 正面写下3
+    现在做 100@@ 会创建新的100行，并把数据增加到 103.
+</pre></div>
+
+
+<p>可视化选择： v,V,<C-v></p>
+<p>前面，我们看到了 <C-v>的示例 （在Windows下应该是<C-q>），我们可以使用 v 和 V。一但被选好了，你可以做下面的事：</p>
+<div class="highlight"><pre><span></span>J → 把所有的行连接起来（变成一行）
+&lt; 或 &gt; → 左右缩进
+= → 自动给缩进 （陈皓注：这个功能相当强大，我太喜欢了）
+
+
+&lt;C-v&gt;
+选中相关的行 (可使用 j 或 &lt;C-d&gt; 或是 /pattern 或是 % 等……)
+$ 到行最后
+A, 输入字符串，按 ESC。
+
+分屏: :split 和 vsplit.
+</pre></div>
+
+
+<p>下面是主要的命令，你可以使用VIM的帮助 :help split. 你可以参考本站以前的一篇文章VIM分屏。</p>
+<div class="highlight"><pre><span></span>    :split → 创建分屏 (:vsplit创建垂直分屏)
+    &lt;C-w&gt;&lt;dir&gt; : dir就是方向，可以是 hjkl 或是 ←↓↑→ 中的一个，其用来切换分屏。
+    &lt;C-w&gt;_ (或 &lt;C-w&gt;|) : 最大化尺寸 (&lt;C-w&gt;| 垂直分屏)
+    &lt;C-w&gt;+ (或 &lt;C-w&gt;-) : 增加尺寸
+</pre></div>
+
+
+<p>Split
+分屏启动Vim</p>
+<div class="highlight"><pre><span></span>使用大写的O参数来垂直分屏。
+
+vim -On file1 file2 ...
+
+使用小写的o参数来水平分屏。
+
+vim -on file1 file2 ...
+</pre></div>
+
+
+<p>注释: n是数字，表示分成几个屏。
+关闭分屏</p>
+<div class="highlight"><pre><span></span>关闭当前窗口。
+</pre></div>
+
+
+<p>n
+    Ctrl+W c</p>
+<div class="highlight"><pre><span></span>关闭当前窗口，如果只剩最后一个了，则退出Vim。
+
+Ctrl+W q
+</pre></div>
+
+
+<p>分屏</p>
+<div class="highlight"><pre><span></span>上下分割当前打开的文件。
+
+Ctrl+W s
+
+上下分割，并打开一个新的文件。
+
+:sp filename
+
+左右分割当前打开的文件。
+
+Ctrl+W v
+
+左右分割，并打开一个新的文件。
+
+:vsp filename
+</pre></div>
+
+
+<p>移动光标</p>
+<p>Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W</p>
+<div class="highlight"><pre><span></span>把光标移到右边的屏。
+
+Ctrl+W l
+
+把光标移到左边的屏中。
+
+Ctrl+W h
+
+把光标移到上边的屏中。
+
+Ctrl+W k
+
+把光标移到下边的屏中。
+
+Ctrl+W j
+
+把光标移到下一个的屏中。.
+
+Ctrl+W w
+</pre></div>
+
+
+<p>移动分屏</p>
+<p>这个功能还是使用了Vim的光标键，只不过都是大写。当然了，如果你的分屏很乱很复杂的话，这个功能可能会出现一些非常奇怪的症状。</p>
+<div class="highlight"><pre><span></span>向右移动。
+
+Ctrl+W L
+
+向左移动
+
+Ctrl+W H
+
+向上移动
+
+Ctrl+W K
+
+向下移动
+
+Ctrl+W J
+</pre></div>
+
+
+<p>屏幕尺寸</p>
+<p>下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用[Ctrl+W &lt;]或是[Ctrl+W &gt;]，但这可能需要最新的版本才支持。</p>
+<div class="highlight"><pre><span></span>让所有的屏都有一样的高度。
+
+Ctrl+W =
+
+增加高度。
+
+Ctrl+W +
+
+减少高度。
+
+Ctrl+W -
+</pre></div>
+
+
+<p>others
+.vimrc
+.vimrc 是控制 vim 行为的配置文件，位于 ~/.vimrc，不论 vim 窗口外观、显示字体，还是操作方式、快捷键、插件属性均可通过编辑该配置文件将 vim 调教成最适合你的编辑器。
+" 定义快捷键的前缀，即<Leader>
+let mapleader=";"</p>
+<p>.vim/ 目录是存放所有插件的地方。vim 有一套自己的脚本语言 vimscript，通过这种脚本语言可以实现与 vim 交互，达到功能扩展的目的。一组 vimscript 就是一个 vim 插件，vim 的很多功能都由各式插件实现。此外，vim 还支持 perl、python、lua、ruby 等主流脚本语言编写的插件，前提是 vim 源码编译时增加 ---enable-perlinterp、--enable-pythoninterp、--enable-luainterp、--enable-rubyinterp 等选项。vim.org 和 github.com 有丰富的插件资源，任何你想得到的功能，如果 vim 无法直接支持，那一般都有对应的插件为你服务，有需求时可以去逛逛。</p>
+<p>vim 插件目前分为 <em>.vim 和 </em>.vba 两类，前者是传统格式的插件，实际上就是一个文本文件，通常 someplugin.vim（插件脚本）与 someplugin.txt（插件帮助文件）并存在一个打包文件中，解包后将 someplugin.vim 拷贝到 ~/.vim/plugin/ 目录，someplugin.txt 拷贝到 ~/.vim/doc/ 目录即可完成安装，重启 vim 后刚安装的插件就已经生效，但帮助文件需执行 :helptags ~/.vim/doc/ 才能生效，可通过 :h someplugin 查看插件帮助信息。传统格式插件需要解包和两次拷贝才能完成安装，相对较繁琐，所以后来又出现了 *.vba 格式插件，安装便捷，只需在 shell 中依次执行如下命令即可：</p>
+<p>vim someplugin.vba
+:so %
+:q</p>
+<p>不论是直接拷贝插件到目录，还是通过 *.vba 安装，都不便于插件卸载、升级，后来又出现了管理插件的插件 vundle。</p>
+<p>后面就正式开始了喽，文中前后内容顺序敏感，请依次查阅。
+install
+fedora 
+中vim安装经常会和vi-mininal冲突故先dnf upgrade vi-minimal 再 dnf install vim</p>
+<p>插件管理
+https://github.com/junegunn/vim-plug</p>
+<p>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+or add this in your .vimrc before plug#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif</p>
+<p>finally :PlugInstall</p>
+<p>其余部分参看.vimrc</p>
+<p>""""""""""""""""""""""""""""""""""""""""""""""""""""
+"basic</p>
+<p>set wildmenu
+filetype on
+syntax enable
+syntax on
+set laststatus=2
+set fileformats=unix,dos
+set nowrap
+set nobackup
+set nu
+set ts=4
+set sw=4
+set expandtab
+set autoindent
+" 自适应不同语言的智能缩进
+filetype indent on
+" 搜索时大小写不敏感
+set ignorecase
+" 关闭兼容模式
+set nocompatible
+" 显示光标当前位置
+set ruler
+" 开启行号显示
+set number
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"PlugInstall</p>
+<p>if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')</p>
+<p>Plug 'bling/vim-airline'
+Plug 'godlygeek/tabular'
+Plug 'luochen1990/rainbow'
+Plug 'plasticboy/vim-markdown'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tomasr/molokai'
+"This plug-in provides automatic closing of quotes, parenthesis, brackets, etc.,
+"Plug 'Valloric/YouCompleteMe'
+call plug#end()</p>
+<p>"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"molokai https://github.com/tomasr/molokai 
+"Molokai is a Vim port of the monokai theme for TextMate originally created by Wimer Hazenberg.
+let g:molokai_original = 1
+"let g:rehash256 = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"airline https://github.com/vim-airline/vim-airline
+"Lean &amp; mean status/tabline for vim that's light as air.When the plugin is correctly loaded, Vim will draw a nice statusline at the bottom of each window.
+let g:airline#extensions#tabline#enabled = 1</p>
+<p>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nerd commenter https://github.com/scrooloose/nerdcommenter
+" Add spaces after comment delimiters by default
+" 用:help nerdcommenter可以查看手册的吧？
+"\cy:注释前复制。即注释以后用p可以贴出原先内容。
+"\c$:从当前字符注释到行尾。
+""\cA:在行尾添加注释，我重新map到\cl
+""\cl \cb:左对齐注释，两端对齐的注释。
+"\cu:反注释
+"<leader>m，<leader>默认是\，也就是说按\cc cu就会将当前行注释。选中几行代码再按\c<space>就会注释你选中的那几行
+"\c<space>注释反注释
+filetype plugin on
+let g:NERDSpaceDelims = 1</p>
+<p>" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1</p>
+<p>" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'</p>
+<p>" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1</p>
+<p>" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/*<em>','right': '</em>/' } }</p>
+<p>" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1</p>
+<p>" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"rainbow https://github.com/luochen1990/rainbow/blob/master/README_zh.md
+"众所周知，最复杂的代码都是由一堆乱七八糟的括号组成。这款插件通过以不同的颜色展示不同层次的括号，致力于帮助你阅读这样的复杂代码。
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+    let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '<em>,</em>',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/[/ end=/]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '<em>': {},
+    \       'tex': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/[/ end=/]/'],
+    \       },
+    \       'lisp': {
+    \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+    \       },
+    \       'vim': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/[/ end=/]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/[/ end=/]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+    \       },
+    \       'html': {
+    \           'parentheses': ['start=/\v\&lt;((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ &gt;])@!\z([-<em>:a-zA-Z0-9]+)(\s+[-</em>:a-zA-Z0-9]+(\=("[^"]</em>"|'."'".'[^'."'".']<em>'."'".'|[^ '."'".'"&gt;&lt;=`]</em>))?)*>/ end=#</\z1># fold'],
+    \       },
+    \       'css': 0,
+    \   }
+    }
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim-markdown https://github.com/plasticboy/vim-markdown#installation
+"Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+"????
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_level = 6
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nerdtree https://github.com/scrooloose/nerdtree
+"The NERDTree is a file system explorer for the Vim editor. Using this plugin, users can visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations.
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 &amp;&amp; !exists("s:std_in") | NERDTree | endif
+"C-n open nerdtree
+map <C-n> :NERDTreeToggle<CR>
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+"let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 让配置变更立即生效
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"""""""""""""""""""""""""""""""""""""""""""""""""""</p>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="oneghostcat">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div><!-- /.entry-content -->
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://mtfield.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<div class="comments">
+    <script id="dsq-count-scr" src="//mtfield.disqus.com/count.js" async></script>
+    <!-- <a href="http://foo.com/bar.html#disqus_thread">Link</a> -->
+</div>
+
+
+  </article>
+</section>
+        <br/>
+        <br/>
+        
+        <section id="extras" class="body">
+                <!-- <section class="body"> -->
+                <div class="blogroll">
+                        <!-- <h2>blogroll</h2> -->
+                        <h2>gates</h2>
+                        <ul>
+                            <li><a href="../archives.html">archives</a></li>
+                            <li><a href="../tags.html">tags</a></li>
+                            <li><a href="../me.html">about</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://twitter.com/oneghostcat">wlight</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100024085652355">martin</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <!-- <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p> -->
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>
+            </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-119556545-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'mtfield';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
